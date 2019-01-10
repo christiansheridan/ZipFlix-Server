@@ -7,6 +7,16 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "profile": "Profile",
+                "zipFlixUser": "Zip Flix User",
+                "video": "Video",
+                "tag": "Tag",
+                "genre": "Genre",
+                "comment": "Comment",
+                "rating": "Rating",
+                "recommendedVideos": "Recommended Videos",
+                "search": "Search",
+                "searchResult": "Search Result",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

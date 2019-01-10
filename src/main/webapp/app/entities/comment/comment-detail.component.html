@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="comment">
+            <h2><span jhiTranslate="zipVidzApp.comment.detail.title">Comment</span> {{comment.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="zipVidzApp.comment.comment">Comment</span></dt>
+                <dd>
+                    <span>{{comment.comment}}</span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.comment.video">Video</span></dt>
+                <dd>
+                    <div *ngIf="comment.video">
+                        <a [routerLink]="['/video', comment.video?.id, 'view']">{{comment.video?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/comment', comment.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

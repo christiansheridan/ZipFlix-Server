@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="rating">
+            <h2><span jhiTranslate="zipVidzApp.rating.detail.title">Rating</span> {{rating.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="zipVidzApp.rating.rating">Rating</span></dt>
+                <dd>
+                    <span>{{rating.rating}}</span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.rating.video">Video</span></dt>
+                <dd>
+                    <div *ngIf="rating.video">
+                        <a [routerLink]="['/video', rating.video?.id, 'view']">{{rating.video?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/rating', rating.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

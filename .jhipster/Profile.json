@@ -1,0 +1,40 @@
+{
+    "name": "Profile",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateOfBirth",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "imageURL",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "interests",
+            "otherEntityName": "tag",
+            "otherEntityRelationshipName": "profile"
+        },
+        {
+            "relationshipName": "zipFlixUser",
+            "otherEntityName": "zipFlixUser",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190110213937",
+    "entityTableName": "profile",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
