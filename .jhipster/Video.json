@@ -1,0 +1,76 @@
+{
+    "name": "Video",
+    "fields": [
+        {
+            "fieldName": "videoName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "imageURL",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "avgRating",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "comments",
+            "otherEntityName": "comment",
+            "otherEntityRelationshipName": "video"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "tags",
+            "otherEntityName": "tag",
+            "otherEntityRelationshipName": "video"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ratings",
+            "otherEntityName": "rating",
+            "otherEntityRelationshipName": "video"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "genres",
+            "otherEntityName": "genre",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipName": "recommendedVideos",
+            "otherEntityName": "recommendedVideos",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "search",
+            "otherEntityName": "search",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "searchResult",
+            "otherEntityName": "searchResult",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190110213939",
+    "entityTableName": "video",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

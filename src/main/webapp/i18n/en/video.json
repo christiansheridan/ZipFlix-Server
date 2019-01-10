@@ -1,0 +1,31 @@
+{
+    "zipVidzApp": {
+        "video": {
+            "home": {
+                "title": "Videos",
+                "createLabel": "Create a new Video",
+                "createOrEditLabel": "Create or edit a Video"
+            },
+            "created": "A new Video is created with identifier {{ param }}",
+            "updated": "A Video is updated with identifier {{ param }}",
+            "deleted": "A Video is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Video {{ id }}?"
+            },
+            "detail": {
+                "title": "Video"
+            },
+            "videoName": "Video Name",
+            "url": "Url",
+            "imageURL": "Image URL",
+            "avgRating": "Avg Rating",
+            "comments": "Comments",
+            "tags": "Tags",
+            "ratings": "Ratings",
+            "genres": "Genres",
+            "recommendedVideos": "Recommended Videos",
+            "search": "Search",
+            "searchResult": "Search Result"
+        }
+    }
+}

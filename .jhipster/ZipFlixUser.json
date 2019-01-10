@@ -1,0 +1,26 @@
+{
+    "name": "ZipFlixUser",
+    "fields": [
+        {
+            "fieldName": "dateOfBirth",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "profiles",
+            "otherEntityName": "profile",
+            "otherEntityRelationshipName": "zipFlixUser"
+        }
+    ],
+    "changelogDate": "20190110213938",
+    "entityTableName": "zip_flix_user",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

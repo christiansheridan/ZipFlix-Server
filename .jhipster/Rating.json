@@ -1,0 +1,26 @@
+{
+    "name": "Rating",
+    "fields": [
+        {
+            "fieldName": "rating",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "video",
+            "otherEntityName": "video",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190110213943",
+    "entityTableName": "rating",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

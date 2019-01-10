@@ -1,0 +1,26 @@
+{
+    "name": "Search",
+    "fields": [
+        {
+            "fieldName": "searchQuery",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "videos",
+            "otherEntityName": "video",
+            "otherEntityRelationshipName": "search"
+        }
+    ],
+    "changelogDate": "20190110213945",
+    "entityTableName": "search",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

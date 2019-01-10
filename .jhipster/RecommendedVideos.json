@@ -1,0 +1,21 @@
+{
+    "name": "RecommendedVideos",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "videos",
+            "otherEntityName": "video",
+            "otherEntityRelationshipName": "recommendedVideos"
+        }
+    ],
+    "changelogDate": "20190110213944",
+    "entityTableName": "recommended_videos",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

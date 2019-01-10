@@ -1,0 +1,21 @@
+{
+    "zipVidzApp": {
+        "recommendedVideos": {
+            "home": {
+                "title": "Recommended Videos",
+                "createLabel": "Create a new Recommended Videos",
+                "createOrEditLabel": "Create or edit a Recommended Videos"
+            },
+            "created": "A new Recommended Videos is created with identifier {{ param }}",
+            "updated": "A Recommended Videos is updated with identifier {{ param }}",
+            "deleted": "A Recommended Videos is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Recommended Videos {{ id }}?"
+            },
+            "detail": {
+                "title": "Recommended Videos"
+            },
+            "videos": "Videos"
+        }
+    }
+}

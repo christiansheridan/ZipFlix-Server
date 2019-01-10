@@ -1,0 +1,22 @@
+{
+    "zipVidzApp": {
+        "zipFlixUser": {
+            "home": {
+                "title": "Zip Flix Users",
+                "createLabel": "Create a new Zip Flix User",
+                "createOrEditLabel": "Create or edit a Zip Flix User"
+            },
+            "created": "A new Zip Flix User is created with identifier {{ param }}",
+            "updated": "A Zip Flix User is updated with identifier {{ param }}",
+            "deleted": "A Zip Flix User is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Zip Flix User {{ id }}?"
+            },
+            "detail": {
+                "title": "Zip Flix User"
+            },
+            "dateOfBirth": "Date Of Birth",
+            "profiles": "Profiles"
+        }
+    }
+}

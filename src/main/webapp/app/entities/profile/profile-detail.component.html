@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="profile">
+            <h2><span jhiTranslate="zipVidzApp.profile.detail.title">Profile</span> {{profile.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="zipVidzApp.profile.name">Name</span></dt>
+                <dd>
+                    <span>{{profile.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.profile.dateOfBirth">Date Of Birth</span></dt>
+                <dd>
+                    <span>{{profile.dateOfBirth}}</span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.profile.imageURL">Image URL</span></dt>
+                <dd>
+                    <span>{{profile.imageURL}}</span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.profile.zipFlixUser">Zip Flix User</span></dt>
+                <dd>
+                    <div *ngIf="profile.zipFlixUser">
+                        <a [routerLink]="['/zip-flix-user', profile.zipFlixUser?.id, 'view']">{{profile.zipFlixUser?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/profile', profile.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

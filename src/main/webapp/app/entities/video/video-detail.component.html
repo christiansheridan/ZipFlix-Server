@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="video">
+            <h2><span jhiTranslate="zipVidzApp.video.detail.title">Video</span> {{video.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="zipVidzApp.video.videoName">Video Name</span></dt>
+                <dd>
+                    <span>{{video.videoName}}</span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.video.url">Url</span></dt>
+                <dd>
+                    <span>{{video.url}}</span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.video.imageURL">Image URL</span></dt>
+                <dd>
+                    <span>{{video.imageURL}}</span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.video.avgRating">Avg Rating</span></dt>
+                <dd>
+                    <span>{{video.avgRating}}</span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.video.genres">Genres</span></dt>
+                <dd>
+                    <span *ngFor="let genres of video.genres; let last = last">
+                        <a [routerLink]="['/genre', genres?.id, 'view' ]">{{genres.id}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.video.recommendedVideos">Recommended Videos</span></dt>
+                <dd>
+                    <div *ngIf="video.recommendedVideos">
+                        <a [routerLink]="['/recommended-videos', video.recommendedVideos?.id, 'view']">{{video.recommendedVideos?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.video.search">Search</span></dt>
+                <dd>
+                    <div *ngIf="video.search">
+                        <a [routerLink]="['/search', video.search?.id, 'view']">{{video.search?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="zipVidzApp.video.searchResult">Search Result</span></dt>
+                <dd>
+                    <div *ngIf="video.searchResult">
+                        <a [routerLink]="['/search-result', video.searchResult?.id, 'view']">{{video.searchResult?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/video', video.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
