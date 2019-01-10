@@ -1,0 +1,56 @@
+
+entity Profile {
+	name String,
+    dateOfBirth LocalDate,
+    imageURL String
+}
+
+entity ZipFlixUser{
+	dateOfBirth LocalDate
+}
+
+entity Video {
+    videoName String,
+    url String,
+    imageURL String,
+    avgRating Double
+}
+
+entity Tag {
+    name String
+}
+
+entity Genre {
+    genre String
+}
+entity Comment {
+    comment String   
+}
+entity Rating {
+    rating Double,
+}
+
+entity RecommendedVideos {
+}
+
+entity Search {
+	searchQuery String
+}
+
+entity SearchResult {
+}
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Profile{interests} to Tag
+	Video{comments} to Comment,
+    Video{tags} to Tag,
+    SearchResult{videos} to Video,
+    Video{ratings} to Rating,
+    RecommendedVideos{videos} to Video,
+    Search{videos} to Video,
+  	ZipFlixUser{profiles} to Profile
+    
+}
+relationship ManyToMany {
+	Video{genres} to Genre
+}
